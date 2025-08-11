@@ -384,7 +384,8 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
       widget.itemScrollController?._attach(this);
     }
 
-    if (widget.itemCount == 0) {
+    if (widget.itemCount != null){
+      if (widget.itemCount == 0) {
       setState(() {
         primary.target = 0;
         secondary.target = 0;
@@ -400,6 +401,7 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
           secondary.target = widget.itemCount - 1;
         });
       }
+    }
     }
   }
 
