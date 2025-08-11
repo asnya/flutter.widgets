@@ -331,7 +331,7 @@ class _ScrollablePositionedListState extends State<ScrollablePositionedList>
     primary.target = initialPosition?.index ?? widget.initialScrollIndex;
     primary.alignment =
         initialPosition?.itemLeadingEdge ?? widget.initialAlignment;
-    if (widget.itemCount > 0 && primary.target > widget.itemCount - 1) {
+    if (widget.itemCount > 0 && primary.target > widget.itemCount - 1 && primary.target > widget.itemCount - 1) {
       primary.target = widget.itemCount - 1;
     }
     widget.itemScrollController?._attach(this);
